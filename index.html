@@ -212,31 +212,35 @@
                         <div class="space-y-4 sm:space-y-6 relative z-10">
                             <h3 class="text-lg sm:text-xl font-bold border-b border-white/10 pb-3 text-brandTeal-light text-center lg:text-left"><i class="fas fa-box-open mr-2"></i> Request Industrial Pricing</h3>
                             
-                            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 sm:space-y-6">
-                                <!-- Web3Forms Access Key Link -->
-    <input type="hidden" name="access_key" value="0c8c5df6-71e2-458f-a866-1ace6350efef">
+                            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                                <!-- Web3Forms Access Key -->
+                                <input type="hidden" name="access_key" value="0c8c5df6-71e2-458f-a866-1ace6350efef">
 
-    <!-- Anti-Spam Honeypot Field -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <!-- Anti-Spam Honeypot Field -->
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                                <!-- Custom Email Subject Line -->
+                                <input type="hidden" name="subject" value="New Quick pricing inquiry from Paxora Packaging Hero Form">
+
                                 <div>
-                                    <label class="block text-[10px] font-semibold uppercase text-gray-400 mb-1">Product Segment</label>
-                                    <select class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2 px-3 text-xs sm:text-sm focus:outline-none focus:border-brandTeal">
-                                        <option>Pinch Bottom BOPP Bags</option>
-                                        <option>Standard PP Woven Sacks</option>
-                                        <option>BOPP Films &amp; Laminations</option>
-                                        <option>FIBC Bulk Sacks (120kg+)</option>
-                                        <option>Other / Custom Specification</option>
+                                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Product Segment</label>
+                                    <select name="product_segment" class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2.5 px-3 text-sm focus:outline-none focus:border-brandTeal">
+                                        <option value="Pinch Bottom BOPP Bags">Pinch Bottom BOPP Bags</option>
+                                        <option value="Standard PP Woven Sacks">Standard PP Woven Sacks</option>
+                                        <option value="BOPP Films &amp; Laminations">BOPP Films &amp; Laminations</option>
+                                        <option value="FIBC Bulk Sacks (120kg+)">FIBC Bulk Sacks (120kg+)</option>
+                                        <option value="Other / Custom Specification">Other / Custom Specification</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-semibold uppercase text-gray-400 mb-1">Target Port / Destination</label>
-                                    <input type="text" placeholder="e.g., Port of Rotterdam, Hamburg" class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2 px-3 text-xs sm:text-sm placeholder-gray-500 focus:outline-none focus:border-brandTeal">
+                                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Your Target Port / Destination</label>
+                                    <input type="text" name="target_port" placeholder="e.g., Port of Rotterdam, Hamburg" required class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2.5 px-3 text-sm placeholder-gray-500 focus:outline-none focus:border-brandTeal">
                                 </div>
                                 <div>
-                                    <label class="block text-[10px] font-semibold uppercase text-gray-400 mb-1">Your WhatsApp / Email</label>
-                                    <input type="text" placeholder="e.g., +1 (555) 012-3456" class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2 px-3 text-xs sm:text-sm placeholder-gray-500 focus:outline-none focus:border-brandTeal">
+                                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Your WhatsApp / Email</label>
+                                    <input type="text" name="contact_method" placeholder="+1 (555) 012-3456" required class="w-full bg-brandNavy-dark/80 text-white border border-white/20 rounded-lg py-2.5 px-3 text-sm placeholder-gray-500 focus:outline-none focus:border-brandTeal">
                                 </div>
-                                <button type="submit" class="w-full teal-gradient hover:opacity-90 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all-300 text-xs sm:text-sm">
+                                <button type="submit" class="w-full teal-gradient hover:opacity-90 text-white font-bold py-3 px-4 rounded-lg shadow-md transition-all-300 text-sm">
                                     Calculate Export Freight &amp; FOB
                                 </button>
                             </form>
